@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile Wijaya, Indra</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <script>
+        function startProgressBar() {
+            bar = document.getElementById("profile");
+
+            // assume that the bar should start at 50%
+            bar.style.width = "50%";
+
+            requestAnimationFrame(function () {
+                bar.style.transition = "width 3s linear";
+                bar.style.height = "100%";
+            });
+        }
+        let count = 0;
+        images = ["assets/img/pp.jpg", "assets/img/link.jpg"];
+        bound = images.length;
+        function ganti() {
+            let photo = document.querySelector("#profile");
+            if (count == bound - 1) {
+                count = 0;
+                photo.setAttribute("src", images[count]);
+                // startProgressBar()
+            } else {
+                count++;
+                // startProgressBar()
+                photo.setAttribute("src", images[count])
+            }
+        }
+            
+    </script>
+    <header>
+        <nav>
+            <h1>< 0x21 /></h1>
+            <!-- <ul><img src="assets/img/link.jpg" alt="link" id="back"></ul> -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <!-- <hr> -->
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <section id="home" class="section-container">
+                <article class="card">
+                    <!-- <h1>Welcome</h1> -->
+                    <img src="assets/img/greetings2.jpg" alt="greetings" id="greetings">
+                    <p>Selamat datang di web profile saya. Web ini didedikasikan dalam rangka memenuhi tugas belajar pemrograman web untuk pemula di situs <span><a href="https://dicoding.com">Dicoding</a></span>. Rencananya jika selesai mengembangkan web ini saya akan meng-<i>improve</i>-nya dengan menggunakan framework Bootstrap dan menambahkan fitur lainnya agar tampilannya jadi semakin menarik dan informatif :)</p>
+                </article>
+            </section>
+
+            <section id="skills" class="section-container">
+                <article class="card">
+                    <h1>Skills</h1>
+                    <div class="flex-container wrap">
+                        <div class="box" id="skill1">
+                        </div>
+                        
+                        <div class="box" id="skill2">
+                        </div>
+                    </div>
+                    
+                </article>
+            </section>
+
+            <section id="projects" class="section-container">
+                <article class="card">
+                    <h1>My Project</h1>
+                    <div class="flex-container">
+                        <!-- <p>Search AD Security Group</p> -->
+                        <div class="box">
+                            <div class="img-container">
+                                <img src="assets/img/portfolio.png" alt="portfolio">
+                            </div>
+                            <figcaption style="text-align: center;">Search AD Security Group</figcaption>
+                        </div>
+                        <!-- <div class="box">
+                            <div class="img-container">
+                                <img src="assets/img/portfolio2.png" alt="">
+                            </div>
+                        </div> -->
+                        <!-- <div class="img-container"><img src="assets/img/portfolio2.png" alt="portfolio"></div> -->
+                    </div>
+                </article>
+            </section>
+
+            <section class="section-container">
+                <article class="card">
+                    <h1>Social Media & Other</h1>
+                    <div class="flex-container">
+                        <div class="box">
+                            <h4>Facebook</h4>
+                            <div class="img-container">
+                                <a href="https://www.facebook.com/wijaya.indra21/" target="_blank">
+                                    <img src="assets/img/facebook.png" alt="" id="linkedin">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>LinkedIn</h4>
+                            <div class="img-container">
+                                <a href="https://www.linkedin.com/in/wijayaindra21/" target="_blank">
+                                    <img src="assets/img/linkedin.png" alt="" id="linkedin">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>Instagram</h4>
+                            <div class="img-container">
+                                <a href="https://www.instagram.com/1ndra.w" target="_blank">
+                                    <img src="assets/img/insta.png" alt="instagram" id="instagram">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>Tryhackme</h4>
+                            <div class="img-container">
+                                <a href="https://tryhackme.com/p/xstreamx" target="_blank"><img src="https://tryhackme-badges.s3.amazonaws.com/xstreamx.png" alt="TryHackMe"></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <aside class="card" id="about">
+            <h1>About Me</h1>
+            <div class="img-container">
+                <img src="assets/img/pp.jpg" alt="profile" id="profile" onclick="ganti()">
+            </div>
+            <div>
+                <p>Indra Wijaya</p>
+                <p>Lokasi: Sangatta, Kutai Timur</p>
+                <p>Halo, saya bekerja sebagai full-time Desktop Support Engineer. Saat ini sedang mendalami Fullstack Web karena saya ingin membuat karya lebih banyak lagi untuk diri saya sendiri maupun orang lain.</p>
+            </div>
+            <!-- <p>Profil dicoding: <a href="https://www.dicoding.com/users/1ndraw">Click Here!</a></p> -->
+            <a href="https://www.dicoding.com/users/1ndraw" target="_blank"><img src="assets/img/dicoding-logo-full.png" alt="dicoding" style="background-color: #fafafa; height: 36px; border-radius: 5px;"></a>
+
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <!-- <div class="box"><p>Pemrograman Web Pemula</p></div> -->
+            <div class="box"><p>&copy 2021 by All Rights Reserved</p></div>
+        </div>
+    </footer>
+
+    <script>
+        let skills = { "HTML": 90, "CSS": 70, "JS": 65, "Python": 85, "Manage Engine": 70, "Netbackup": 65, "Cybersecurity": 60, "Hardware": 70}
+        let count2 = 0;
+
+        for (const [key, value] of Object.entries(skills)) {
+            let newElement = document.createElement('p');
+            let divElement = document.createElement('div');
+            // divElement = divElement.setAttribute("class", "skill-container");
+            if (value > 80) {
+                newElement.innerHTML = `${key}`;
+                divElement.innerHTML = `<div class="skills high" id="${key}">${value}%</div>`;
+            } else if (value > 60) {
+                newElement.innerHTML = `${key}`;
+                divElement.innerHTML = `<div class="skills medium" id="${key}">${value}%</div>`;
+            } else {
+                newElement.innerHTML = `${key}`;
+                divElement.innerHTML = `<div class="skills low" id="${key}">${value}%</div>`;
+            }
+            // document.getElappendChild(newElement);
+            if(count2 < 4 ) {
+                document.getElementById("skill1").appendChild(newElement);
+                document.getElementById("skill1").appendChild(divElement);
+            } else {
+                document.getElementById("skill2").appendChild(newElement);
+                document.getElementById("skill2").appendChild(divElement);
+            }
+            divElement.setAttribute("class", "skill-container");
+            document.getElementById(`${key}`).style.width = `${value}%`;
+            count2+=1;
+        }
+    </script>
+</body>
+
+</html>
